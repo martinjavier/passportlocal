@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Registro de Usuario</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #92a8d1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container my-5">
+      <div class="jumbotron">
+        <h1>Registro de Usuario</h1>
+        <br />
+        <form
+          class="form"
+          role="form"
+          action="/signup"
+          method="post"
+          autocomplete="off"
+        >
+          <div class="form-group">
+            <input
+              name="username"
+              placeholder="Nombre de usuario"
+              class="form-control"
+              type="text"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              name="password"
+              placeholder="Clave"
+              class="form-control"
+              type="password"
+              required
+            />
+          </div>
+
+          <br />
+
+          <div class="form-group">
+            <input
+              name="firstName"
+              placeholder="Nombre"
+              class="form-control"
+              type="text"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              name="lastName"
+              placeholder="Apellido"
+              class="form-control"
+              type="text"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              name="email"
+              placeholder="Email"
+              class="form-control"
+              type="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input class="btn btn-success my-3" type="submit" value="Aceptar" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-warning my-5" onclick="volver()">
+              Ir a Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function redireccionar(pagina) {
+    location.href = pagina;
+  }
+  function volver() {
+    console.log("volver");
+    redireccionar("/login");
+  }
+</script>

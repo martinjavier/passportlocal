@@ -1,0 +1,70 @@
+<div
+  class="container text-center"
+  style="background-color: lightgreen; border-radius: 25px;"
+>
+  <a style="font-size: 40px; padding: 40px; margin-top: 25px;"><i>Bienvenido
+      {{usuario}}</i></a>
+  <button
+    type="button"
+    class="btn btn-danger my-5"
+    onclick="logout()"
+  >LOGOUT</button>
+</div>
+<div class="container">
+  <div class="jumbotron" style="border-radius: 25px; margin: 10px;">
+
+    <h1 style="color: blue;">Ingrese Producto</h1>
+
+    <h3 style="color: black;">Nombre</h3>
+    <input type="text" name="nombre" />
+
+    <h3 style="color: black;">Precio</h3>
+    <input type="text" name="precio" />
+
+    <h3 style="color: black;">Foto URL</h3>
+    <input type="text" name="foto" />
+
+    <br />
+
+    <button
+      type="button"
+      class="btn btn-danger my-5"
+      onclick="enviar()"
+    >ENVIAR</button>
+
+    <h1 style="color: darkred;">Lista de Productos</h1>
+
+    <table class="table" id="productos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Foto URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Regla de Madera</td>
+          <td>55,25</td>
+          <td>reglaMadera.jpg</td>
+        </tr>
+        <tr>
+          <td>Sacapuntas rojo</td>
+          <td>35,00</td>
+          <td>sacapuntas.jpg</td>
+        </tr>
+        <tr>
+          <td>Cuaderno espiralado</td>
+          <td>60,00</td>
+          <td>cuaderno.jpg</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function redireccionar(pagina) { location.href = pagina; } function logout() {
+  console.log('logout'); redireccionar('/logout') } function enviar() {
+  console.log('enviar'); redireccionar('/enviar') }
+</script>
